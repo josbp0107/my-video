@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish', sans-serif;
+}
+
+.header {
+    background-color: #21C08B;
+    width: 100%;
+    height: 10%;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.header__img {
+    width: 50px;
+    margin-left: 20px;
+    /* margin-top: 1.4%; */
+    padding-top: 10px; 
+    cursor: pointer;
+}
+
+.header__menu {
+    margin-right: 60px;
+}
+
+.header__menu ul {
+    display: none; /* Mientras no se haga hover, estará oculto*/
+    list-style: none;
+    position: absolute;
+    width: 100px;
+    text-align: right;
+    margin: 0px 0px 0px -14px;
+}
+
+.header__menu:hover ul, ul:hover {
+    display: block; /* Cuando se haga hover, aparecerá la lista desplegable*/
+}
+
+.header__menu li {
+    margin: 10px 0px;
+}
+
+.header__menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header__menu li a:hover {
+    text-decoration: underline;
+}
+
+.header__menu--profile {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.header__menu--profile img {
+    margin-right: 8px;
+
+}
+
+.main {
+    height: 300px;
+}
+
+.main__title {
+    color: white;
+    font-size: 25px;
+}
+
+.input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    height: 40px;
+    width: 70%;
+    padding: 0px 20px;
+    outline: none;
+}
+
+::placeholder {
+    color: white;
+}
+
+        /*   Login Page   */
+
+.login {
+    background: linear-gradient(#21C08B,#8F57FD);
+    display: flex;
+    align-items: center; /* Centra de forma vertical*/
+    justify-content: center; /*Centra de manera horizontal */
+    flex-direction: column; /*Todos nuestros elementos se ubiquen de arriba hacia abajo*/
+    padding: 0px 30px;
+    min-height: calc(100vh - 200px);
+}
+
+.login__container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 40px;
+    color: white;
+    padding: 60px 68px 40px;
+    min-height: 642px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    /*width: 300px;*/
+}
+
+.login__container h2{
+    text-align: center;
+}
+
+
+.login__container--form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login__container--form label {
+    font-size: 14px;
+}
+
+.login__input {
+    background-color: transparent;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
+    padding: 0px 30px;
+    outline: none;
+    height: 50px;
+}
+
+.login__button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    height: 50px;
+    letter-spacing: 1px;
+    border: 0px;
+}
+
+.login__container--remember-me {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.login__container--remember-me a {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.login__container--remember-me a:hover {
+    text-decoration: underline;
+}
+
+.login__container--social-media > div {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.login__container--social-media > div > img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.login__container--register {
+    font-size: 14px;
+}
+
+.login__container--register a {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login__container--register a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    padding-top: 10px;
+    background-color: #8F57FD;
+    display: flex;
+    align-items: center;
+    min-height: 65px;
+    width: 100%;
+}
+
+.footer a {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/*  Register page   */
+
+.register__container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 40px;
+    color: white;
+    padding: 60px 82px 43px;
+    min-height: 646px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.register__container--sign-in {
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.register__container--sign-in a {
+    color: white;
+    text-decoration: none;
+}
+
+.register__container--sign-in a:hover {
+    text-decoration: underline;
+}
