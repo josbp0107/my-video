@@ -67,11 +67,106 @@
 
 .main {
     height: 300px;
+    display: flex;
+    background: linear-gradient(#21C08B,#8F57FD);
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .main__title {
+    padding-bottom: 10px;
     color: white;
     font-size: 25px;
+}
+
+.categories__title {
+    color: white;
+    background-color: #8F57FD;
+    font-size: 20px;
+    /* position: relative;  */
+    padding-left: 30px;
+    width: 100%;
+
+}
+
+.carousel {
+    width: 100%;
+    overflow: scroll; /*  */
+    padding: 20px;
+    position: relative; /* Todos los elementos que esten drento de el, se posicionaran en relacion al padre  */
+    background: #8F57FD;
+}
+
+.carousel__container {
+    white-space: nowrap; /* Agrega los elementos al lado del otro, sin seguir debajo*/
+    margin: 70px 0px;
+    padding-bottom: 10px;
+    
+}
+
+.carousel-item {
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left; /* la animacion empieza de izquierda a derecha */
+    position: relative;
+}
+
+.carousel-item:hover ~ .carousel-item{
+    transform: translate3d(100px,0,0); /* Cuando se pase el mouse por encima, Se desplazarán todos hacia la derecha*/
+}
+
+.carousel__container:hover .carousel-item {
+    opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.carousel-item__img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover; /* coloca la imagen como en el tamñana original */
+    
+}
+
+.carousel-item__details {
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100% ); /*Desvanecimiento */
+    font-size: 10px;
+    opacity: 1;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    justify-content: flex-end;
+    
+}
+.carousel-item__details__icon {
+    width: 30px;
+    height: 30px;
+}
+
+.carousel-item__details--title {
+    color: white;
+    margin: 0;
+}
+.carousel-item__details--subtitle {
+    color: white;
+    margin: 0;
 }
 
 .input {
@@ -175,6 +270,7 @@
     align-items: center;
     font-size: 14px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .login__container--social-media > div > img {
@@ -204,6 +300,7 @@
     align-items: center;
     min-height: 65px;
     width: 100%;
+    /* flex-wrap:wrap; */ /* Se le puede agregar en vez del media query*/
 }
 
 .footer a {
@@ -246,3 +343,26 @@
 .register__container--sign-in a:hover {
     text-decoration: underline;
 }
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px; 
+    display: none; 
+}
+
+@media only screen and (max-width: 600px) {
+    .login__container {
+        background-color: transparent;
+        border: none;
+        padding: 0px;
+        width: 100%;
+    }
+
+    .footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* PAGE 404 NOT FOUND   */
+
