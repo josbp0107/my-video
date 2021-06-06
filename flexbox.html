@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Flexbox</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        height: 100vh;
+        flex-flow: column;
+        font-size: 16px;
+    }
+
+    .header {
+        
+        height: 3rem;
+    }
+
+    .menu {
+        display: flex;   
+    }
+
+    .menu-item {
+        list-style: none;
+        flex: 1; /*Ocupa todo el ancho disponible */    
+        line-height: 3rem;
+        text-align: center;
+        transition: flex .5s;
+    }
+
+    .menu-item:hover {
+        flex: 2;
+    }
+
+    .menu-item:nth-child(1) {
+        background:#264653;
+    }
+
+    .menu-item:nth-child(2) {
+        background:#2a9d8f;
+    }
+
+    .menu-item:nth-child(3) {
+        background:#e9c46a;
+    }
+
+    .menu-item:nth-child(4) {
+        background:#f4a261;
+    }
+
+
+    .container {
+        display: flex;
+        height: inherit;
+    } 
+
+    .content {
+        background:#457b9d;
+        flex: 1;
+    }
+
+    .aside {
+        background: maroon;
+        flex: 0 0 25%;
+    }
+
+    .footer {
+        background: salmon;
+        height: 6rem;
+        margin-top: auto;
+    }
+
+</style>
+
+<body>
+    <header class="header">
+        <ul class="menu">
+            <li class="menu-item">Gallery</li>
+            <li class="menu-item">About</li>
+            <li class="menu-item">Contact</li>
+            <li class="menu-item">More</li>
+        </ul>
+    </header>
+    <section class="container">
+        <section class="content">Content</section>
+        <aside class="aside">Aside</aside>
+    </section>
+    <footer class="footer">Footer</footer>
+</body>
+</html>
